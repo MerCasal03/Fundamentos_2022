@@ -10,6 +10,10 @@ print(str.upper(nombre2[5]+nombre2[6]))
 nombre_apellido=input("Decime tu nombre completo: ")
 print("Hola"+" "+nombre_apellido)
 
+#3 alternativo
+def nombre_completo(nombre_apellido):
+    print("Hola "+ nombre_apellido)
+    
 #4
 primer_nombre=input("decime tu primer nombre: ")
 primer_apellido=input("decime tu apellido: ")
