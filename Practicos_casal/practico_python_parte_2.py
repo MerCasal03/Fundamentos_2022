@@ -149,9 +149,50 @@ print(alumnos)
 for alumno in alumnos:
     print(alumno, sum(alumnos[alumno])/len(alumnos[alumno]))
 
+#Funciones
+#13
+numeros=input("Dos numeros enteros: ")
+numeros_enteros=numeros.split(",")
+numero1=int(numeros_enteros[0])
+numero2=int(numeros_enteros[1])
+print(numero1)
+def esMultiplo(numero1, numero2):
+    if numero1 % numero2 == 0 or numero2 % numero1 ==0:
+        print("Son multiplos")
+    else:
+        print("No son multiplos")
 
+esMultiplo(numero1, numero2)
 
+#14
+def temperatura_media(temperatura_max, temperatura_min):
+    print((temperatura_max + temperatura_min)/ 2)
 
+temperatura=int(input("introducir cantidad de dias a medir: "))
+dias={}
+
+for temp in range(temperatura):
+    dia=input("Dia: ")
+    temp_media=[]
+    temperatura_max=int(input("Temp Máxima del día: "))
+    temperatura_min=int(input("Temp mínima del día: "))
+    temp_media.append(temperatura_media(temperatura_max, temperatura_min))
+    dias[dia]=temp_media
+print(dias)
+
+#15
+cant_socios=int(input("Cantidad de socios a introducir: "))
+socios={1:{"numero_socio":1, "nombre_y_apellido":"Florencia Ocampo", "fecha_de_ingreso":"14/09/2001", "cuota_al_dia": "Si"}, 2:{"numero_socio":2, "nombre_y_apellido":"David Estévez", "fecha_de_ingreso":"14/09/2001", "cuota_al_dia": "Si"}, 3:{"numero_socio":3, "nombre_y_apellido":"Sofía Cáceres", "fecha_de_ingreso":"14/09/2001", "cuota_al_dia": "Si"}}
+print(socios)
+for persona in range(cant_socios):
+    socio=[]
+    numero_socio=int(input("numero de socio: "))
+    nombre_y_apellido=input("Nombre y apellido: ")
+    fecha_de_ingreso=input("Fecha de ingreso: ")
+    cuota_al_dia=input("Cuota al dia: ")
+    socio.append(numero_socio)
+    socios[numero_socio]=socio
+print(socios)
 
 
 
