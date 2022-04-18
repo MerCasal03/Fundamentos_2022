@@ -29,13 +29,20 @@ def contador_de_palabras(archivo):
 
 #5
 
+
 #6
+def eliminar_saltos(entrada,salida):
+    with open(entrada,"r") as f, open(salida,"w") as s:
+        for line in f:
+            s.write(line.strip("\n"))
 
 #7
 
+
 #8
-
-
+def join_files(file1,file2,file3):
+    with open(file1,"r") as f1, open (file2,"r") as f2, open(file3,"a") as f3:
+        f3.write(f1.read() + f2.read())
 #9
 def word_counter(archivo):
     frecuencias=dict()

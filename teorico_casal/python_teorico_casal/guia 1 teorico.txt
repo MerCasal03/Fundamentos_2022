@@ -1,0 +1,62 @@
+1. Desafio I:
+	1)	agregar azucar
+		Si el mate está vació,llenarlo con yerba del yerbero
+		si el mate está lleno:
+			vaciarlo en maceta
+			llenarlo con yerba del yerbero
+		Poner azucar
+		Poner bombilla en el mate
+2.Anatomía de la Computadora
+	Me parece que mi celular funciona mediante diferetes códigos de programación que reciben infromación de lo que una persona está usando y devuelven una acción.
+4. En visual code es >>>
+5. 
+6.
+	-3*5=15
+		el * es una multiplicación
+	-8/4=2
+		la / es una división
+7. Apto Doris
+8. Los resultados son  True o Flase (booleanos), en este caso el resutado sería False.
+9.El resultado es False, porque a pesar de decir lo mismo, la computadora reconoce a las minusculas y a las mayusculas como diferentes caractéres a pesar de ser las mismas letras
+10.-Tendrá la posición seis, ya que el primer caracter se cuenta como un 0
+	-si utilizamos saludo[0:], dará como resultado todos los caracteres desde el primero ya que no se introduce un parametro de fin
+11.
+	len(saludo): deterrmina la cantidad de caractéres en el string
+	saludo.upper():reemplaza las minúsculas por mayúsculas
+	saludo.lower():reemplaza las mayúsculas por minúsculas
+	saludo.count("o"): cuenta la cantidad de "o" en el string
+	saludo.replace("o","a"): reemplaza las "o" por "a"
+11. dan todas minusculas, ya que la primera acción las vuelve todas mayusculas y la seguna todas minusculas
+	desafio IV: funciona, en lugar de reemplazar solo un caracter, reemplaza toda la palabra
+	-no, la variable no cambia porque no la modificamos, para esto tendriamos que programar que saludo=saludo.replace("mundo", "terricolas")
+13.para conocer la longitud de una lista se puede utilizar el mismo metodo que se utiliza para un string: len (lista)
+14.list.index()se utiliza para obtener la posición de un objeto de la lista en particular, por lo tanto si 25 está en la lista devuelve la posicion 3, si lo removemos devuelve que el 25 no se encuentra en la lista
+15.diccionario.????
+16.
+17.
+	desafio VI:
+		def termos_por_personas(personas):
+		...     termos=(personas*30)/1000 
+		...     return termos
+	desafio VII:
+		def vaquita_facturas(precio_docena, cantidad_personas):
+		...     vauita_por_persona = precio_docena / cantidad_personas
+		...     return vauita_por_persona
+18.
+	desafio VIII:
+		def calcular_cantidad_de_agua (cantidad_de_personas):
+		...     if cantidad_de_personas * 30 <= 1000:
+		...             return cantidad_de_personas * 30
+		...     else:
+		...             return "vas a necesitar más de un termo"
+19.Desafio IX:
+def empanadas_gusto():
+    for i in lista_comensales:
+        dict1[pedido[i]] += 1
+    print(dict1)
+
+empanadas_gusto()
+
+
+		
+		

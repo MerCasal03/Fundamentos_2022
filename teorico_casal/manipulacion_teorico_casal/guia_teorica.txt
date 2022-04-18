@@ -1,0 +1,3 @@
+desafio II:
+os.mkdir(“nombre_de_carpeta”) →crea una carpeta
+os.listdir() →lista los archivos que están en el directorio en el que estoy

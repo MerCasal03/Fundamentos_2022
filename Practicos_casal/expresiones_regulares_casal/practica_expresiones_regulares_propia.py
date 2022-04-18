@@ -6,12 +6,17 @@ coincidencias=re.findall(patron1, texto1)
 print(coincidencias)
 print(len(coincidencias))
 #2
+texto = "2. Tutor de la materia: Guillermo Benitez"
+re.search('\W', texto)
 
 #3
 #re.findall("")
 
 
 #4
+string = "Defíni la función aprobar_materias"
+patron = '\w' + '_' + '\w'
+re.search(patron, string) 
 
 #5
 # def empieza_con_numero_especifico(numero_especifico, string):
