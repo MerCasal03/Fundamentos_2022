@@ -1,13 +1,10 @@
 #1
 import re
 texto1= "A la grande le puse -Cuca-, 123456789"
-patron1="[A-Z0-9a-z]+"
-patron2="[2]"
-# coinsidencias=print(re.findall(patron1, texto1))
-# xxx=re.search(patron1, texto1).group(0)
-# print(xxx)
-# if len(coincidencias) > 0:
-#     print (True)
+patron1="[A-Z0-9a-z]"
+coincidencias=re.findall(patron1, texto1)
+print(coincidencias)
+print(len(coincidencias))
 #2
 
 #3

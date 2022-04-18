@@ -7,17 +7,19 @@
                 
 
 #2
-from itertools import islice
-
 def imprimir_n(archivo, cantidad_de_lineas):
     with open(archivo, "r") as f:
-        for linea in islice(f, cantidad_de_lineas):
-            print(linea, end="")
+        for linea in range(0, cantidad_de_lineas):
+            for line in f:
+                print(line)
 #3
 def ultimas_n_lineas(archivo, cantidad_de_lineas):
+    lista=[]
     with open(archivo, "r") as f:
-        for linea in islice(f, cantidad_de_lineas):
-            print()
+        for linea in f:
+            lista.append(linea)
+        for linea in f[linea-1:]:
+            print(linea)
 
 #4
 def contador_de_palabras(archivo):
