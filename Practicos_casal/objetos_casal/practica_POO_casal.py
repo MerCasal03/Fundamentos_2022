@@ -30,7 +30,10 @@ class Golondrina:
           self.volar(0)
 
     def volar(self, kms):
-          self.energia -= 10 + kms
+        if self.energia > 0:
+          self.energia -= 10 + kms #preguntar como hacer funcion si tiene la energia suficiente para volar, pero luego de hacerlo queda en <=0
+        else:
+            return "No tiene suficiente energia"
 
     def esta_debil(self):
          self.energia < 10
