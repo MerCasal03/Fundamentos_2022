@@ -69,7 +69,7 @@ class Contador:
         self.valor=valor_actual
     
     def inc(self):
-        self.valor +=1
+        self.valor += 1
     
     def dis(self):
         self.valor -= 1
@@ -80,7 +80,7 @@ class Contador:
     def valor_nuevo(self, valor_nuevo):
         self.valor=valor_nuevo
     
-contador=Contador(0)
+valor_1=Contador(0)
 #5
 
 #6
