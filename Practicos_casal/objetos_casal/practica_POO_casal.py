@@ -45,6 +45,9 @@ class Golondrina:
          self.energia -= self.volar(20)
          self.energia += self.comer_alpiste(10)
 
+    def estaEnEquilibrio(self):
+        return 150 <= self.energia <= 300
+
 pepita = Golondrina(100)
 anastasia = Golondrina(200)
 maria = Golondrina(42)
@@ -102,27 +105,33 @@ class Calculadora:
     #     X
     
 #7
-class Gorriones:
-    def __innit__(self, kms, gramos):
-        self.kms=kms
-        self.gramos=gramos
+class Gorrion:
+    def __innit__(self):
+        self.kmsActuales=0
+        self.gramosActuales=0
+        self.listaGramos=[]
+        self.listaKms=[]
 
     def volar(self, kms_nuevos):
-        self.kms*=kms_nuevos
+        self.kmsActuales+=kms_nuevos
+        self.kmsActuales.append(kms_nuevos)
     
     def comer(self, gramos):
-        self.gramos += gramos
+        self.gramosActuales += gramos
+        self.listaGramos.append(gramos)
         
-    def CSS(self, kilometros_volados, gramos_de_comida):
-        self.CSS=kilometros_volados / gramos_de_comida
+    def CSS(self):
+        if self.gramosActuales > 0:
+            return self.kmsActuales / self.gramosActuales
+        else:
+            return None
     
-    def CSSP(self, mayores_kilometros, mayor_gramos):
-        self.CSSP=mayores_kilometros / mayor_gramos
+    def CSSP(self):
+        return max(self.listaKms) / min(self.listaGramos)
 
-    def CSSV(self, cantidad_de_vuelos, cantidad_comidas):
-            self.CSSV=cantidad_de_vuelos / cantidad_comidas
+    def CSSV(self):
+        return len(self.listaKms) / len(self.listaGramos)
     
     def equilibrio(self):
-        self.CSSP=0.5<self.CSSP<2
+        return 0.5<=self.CSS()<=2
 
-molinero=Gorriones(100, 10)
