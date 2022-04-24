@@ -1,13 +1,11 @@
 #1
 import re
 texto1= "A la grande le puse -Cuca-, 123456789"
-patron1="[A-Z0-9a-z]"
-coincidencias=re.findall(patron1, texto1)
-print(coincidencias)
-print(len(coincidencias))
+print(re.search("W\w+", texto1))
+
 #2
 texto = "2. Tutor de la materia: Guillermo Benitez"
-re.search('\W', texto)
+print(re.findall('\S\w*', texto1))
 
 #3
 #re.findall("")
@@ -15,19 +13,16 @@ re.search('\W', texto)
 
 #4
 string = "Defíni la función aprobar_materias"
-patron = '\w' + '_' + '\w'
-re.search(patron, string) 
+re.search('\w' + '_' + '\w', string) 
 
 #5
-# def empieza_con_numero_especifico(numero_especifico, string):
-#      if re.search(numero_especifico\A, string).group() == numero_especifico:
-#          print("Empieza con caracter indicado")
-#      else:
-#          print("No empieza con caracter indicado")
+def empieza_con_numero_especifico(numero_especifico, string):
+    if re.search('numero_especifico\A', string) == numero_especifico:
+        print("Empieza con caracter indicado")
+    else:
+        print("No empieza con caracter indicado")
 
-# empieza_con_numero_especifico("[2]", texto1)
-
-print(re.search(patron2, texto1).group())
+empieza_con_numero_especifico(2, texto1)
 
 #6
 listaprueba=["Ana Maria",
@@ -44,7 +39,8 @@ listaprueba=["Ana Maria",
 
 #7
 print(re.findall("[A-Za-z\s0-9]", texto1))
-
+#or
+print(re.findall('\d'))
 #8
 print(re.findall("[0-9]", texto1))
 
