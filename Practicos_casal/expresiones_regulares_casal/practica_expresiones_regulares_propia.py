@@ -1,7 +1,7 @@
 #1
 import re
 texto1= "A la grande le puse -Cuca-, 123456789"
-print(re.search("W\w+", texto1))
+print(re.search("\S\w+", texto1))
 
 #2
 texto = "2. Tutor de la materia: Guillermo Benitez"
@@ -13,7 +13,7 @@ print(re.findall('\S\w*', texto1))
 
 #4
 string = "Defíni la función aprobar_materias"
-re.search('\w' + '_' + '\w', string) 
+re.search('\S\w*' + '_' + '\S\w*', string) 
 
 #5
 def empieza_con_numero_especifico(numero_especifico, string):
@@ -45,8 +45,21 @@ print(re.findall('\d'))
 print(re.findall("[0-9]", texto1))
 
 #9
-print(re.findall("[-- ]", texto1))#averiguar que caracter tengo que usar para que tome lo que está dentro de dos -
+print(re.findall("['-' + '\w*' + '-' ]", texto1))
 
 #10
+print(re.findall("['@' + '\w' + '&'"))
+
+#11
 
 
+#12
+re.sub("['\s' + '_' + ':']", "|", texto1)
+
+#13
+re.sub("[\W{2}]", "_", texto1)
+
+#14
+re.sub("[\s]", ";", texto1)
+
+#15
