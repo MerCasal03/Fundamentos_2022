@@ -1,4 +1,8 @@
 import os
+with open("bio3.txt", "w") as f:
+    f.write("estoy practicando manipulacion")
+with open("bio3.txt", "a") as f:
+    f.write("\nagrego texto\nhola")
 #1
 def no_empiezan_con(archivo, letra):
     with open(archivo, "r") as a:
@@ -31,7 +35,12 @@ def contador_de_palabras(arch):
         print(len(palabras))
 
 #5
-
+def reemplazar(entrada, letra, salida):
+    with open(entrada,"r") as f, open(salida,"w") as s:
+        d=f.read().split()
+        for i in d:
+            if i==letra:
+                s.write(i("letra\n"))
 
 #6
 def eliminar_saltos(entrada,salida):
@@ -40,12 +49,26 @@ def eliminar_saltos(entrada,salida):
             s.write(line.strip("\n"))
 
 #7
-
+def palabra_mas_larga(arch):
+    with open(arch, "r") as f:
+        p=f.read().split()
+        palabra_mayor=len(p[0])
+        palabra_mostrar=p[0]
+        for i in p:
+            if palabra_mayor <= len(i):
+                palabra_mostrar=i
+                palabra_mayor=len(i)
+            else:
+                palabra_mostrar=palabra_mostrar
+        print(palabra_mostrar)
+        print(len(palabra_mostrar))
 
 #8
-def join_files(file1,file2,file3):
-    with open(file1,"r") as f1, open (file2,"r") as f2, open(file3,"a") as f3:
-        f3.write(f1.read() + f2.read())
+with open("bio4.txt", "w") as f:
+    f.write("hola a todos")
+def unir_docs(arch1, arch2, salida):
+    with open(arch1, "r") as f1, open(arch2, "r") as f2, open(salida, "a") as s:
+        s.write(f1.read() + f2.read())
 #9
 def word_counter(archivo):
     frecuencias=dict()
@@ -60,7 +83,6 @@ def word_counter(archivo):
             frecuencias[word]=round(frecuencias[word]/len(word_list,3))
     print(frecuencias)
 
-#open("mi_arch.txt", "r").read()
 
 #10
 import glob
