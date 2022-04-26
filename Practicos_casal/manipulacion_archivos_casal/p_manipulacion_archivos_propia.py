@@ -1,10 +1,13 @@
+import os
 #1
-# def(archivo, letra):
-#      with open(archivo, "r") as a:
-#          word_list=a.read().split()
-#         for i in word_list:
-#             if i[0] = letra:
-                
+def no_empiezan_con(archivo, letra):
+    with open(archivo, "r") as a:
+        word_list=a.read().split()
+        for i in word_list:
+            contador=[]
+            if i[0] != letra:
+                contador.append(i)
+    print(len(contador))
 
 #2
 def imprimir_n(archivo, cantidad_de_lineas):
@@ -13,13 +16,13 @@ def imprimir_n(archivo, cantidad_de_lineas):
             for line in f:
                 print(line)
 #3
-def ultimas_n_lineas(archivo, cantidad_de_lineas):
-    lista=[]
+def imprimir_ultimas_n(archivo, n):
     with open(archivo, "r") as f:
-        for linea in f:
-            lista.append(linea)
-        for linea in f[linea-1:]:
-            print(linea)
+        lista=[]
+        for line in f:
+            lista.append(line)
+        for line in lista[n:]:
+            print(line)
 
 #4
 def contador_de_palabras(archivo):
