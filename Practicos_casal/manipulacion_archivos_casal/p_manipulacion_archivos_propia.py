@@ -25,10 +25,10 @@ def imprimir_ultimas_n(archivo, n):
             print(line)
 
 #4
-def contador_de_palabras(archivo):
-    with open(archivo, "r") as f:
-        word_list=f.read().split()
-        print(len(word_list))
+def contador_de_palabras(arch):
+    with open(arch, "r") as f:
+        palabras=f.read().split()
+        print(len(palabras))
 
 #5
 

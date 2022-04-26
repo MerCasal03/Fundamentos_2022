@@ -15,4 +15,3 @@ def reemplazar(entrada, letra, salida):
             if i==letra:
                 s.write(i("letra\n"))
 
-os.remove(os.getcwd()+"\prueba.txt")
