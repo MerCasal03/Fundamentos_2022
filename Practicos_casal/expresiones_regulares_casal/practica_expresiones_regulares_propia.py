@@ -8,7 +8,15 @@ texto = "2. Tutor de la materia: Guillermo Benitez"
 print(re.findall('\S\w*', texto1))
 
 #3
-#re.findall("")
+def encontrar_patron(string):
+    patron="he"
+    if re.search(patron, string) is not None:
+        return "Se encontró el patron"
+    else:
+        return "No se encontró el patron"
+ #search-->si aparece o no y desde-hasta que posición
+ #findall-->encuentra y devuelve todas
+
 
 
 #4
@@ -45,12 +53,24 @@ print(re.findall('\d'))
 print(re.findall("[0-9]", texto1))
 
 #9
-print(re.findall("['-' + '\w*' + '-' ]", texto1))
-
+def entre_guiones(string):
+    #print(re.findall("['-' + '\w*' + '-' ]", texto1))
+    return re.findall(r"-(.*?)-", string)
+    #r que se lea literalmente lo que está entre comillas
+    #.cualquier caracter
+    #*0 o mas veces
+    #? ve todos los patrones dentro de string, no solo el primero y el ultimo
+    #^ no contar un caracter/rango que venga despues de ^
+    #\. que aparezca literalmente un punto, no el metacaracter
+    #+ 0 o más veces
 #10
-print(re.findall("['@' + '\w' + '&'"))
+def entre_simbolos(string):
+    print(re.findall(r"@(.*?)&", string))
 
-#11
+#11 tipico de parcial
+def dos_P(lista):
+    for elemento in lista:
+        resultado= re.match("(P\w*)\W(P\w*)", elemento  )
 
 
 #12
@@ -62,4 +82,7 @@ re.sub("[\W{2}]", "_", texto1)
 #14
 re.sub("[\s]", ";", texto1)
 
-#15
+#15 buscar mails
+#r"[\w+_-]@[\w+]\.[\a-z]{2,6}
+#entre corchetes xq estoy haciendo un rango
+#{2,6} no es necesario, restringe la cantidad de caracteres
