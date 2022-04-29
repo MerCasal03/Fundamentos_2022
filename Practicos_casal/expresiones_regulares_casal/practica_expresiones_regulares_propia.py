@@ -46,11 +46,18 @@ listaprueba=["Ana Maria",
 # encontrar_frase("[Ana Maria]", listaprueba)
 
 #7
-print(re.findall("[A-Za-z\s0-9]", texto1))
-#or
-print(re.findall('\d'))
+def solo_autorizados(string):
+    patron7='[A-Za-z\s0-9]'
+    if len(re.findall(patron7, string)) == len(string):
+        print("Están todos autorizados")
+    else:
+        print("No están todos autorizados")
+
 #8
-print(re.findall("[0-9]", texto1))
+def separar_numeros(string):
+    patron8='\d'
+    numeros=re.findall(patron8, string)
+    print(numeros)
 
 #9
 def entre_guiones(string):
@@ -70,19 +77,33 @@ def entre_simbolos(string):
 #11 tipico de parcial
 def dos_P(lista):
     for elemento in lista:
-        resultado= re.match("(P\w*)\W(P\w*)", elemento  )
+        resultado= re.match("(P\w*)\W(P\w*)", elemento)
 
 
 #12
-re.sub("['\s' + '_' + ':']", "|", texto1)
+def reemplazar(string):
+    patron12="['\s' + '_' + ':']"
+    print(re.sub(patron12, '|', string))
 
 #13
-re.sub("[\W{2}]", "_", texto1)
+def reemplazar2(string):
+    patron13='\W{2}'
+    print(re.sub(patron13, "_", string))
 
 #14
-re.sub("[\s]", ";", texto1)
+def reemplazar3(string):
+    patron14='\s'
+    print(re.sub(patron14, ";", string))
 
 #15 buscar mails
-#r"[\w+_-]@[\w+]\.[\a-z]{2,6}
+#r"[\w+_-]@[\w+]\.[\a-z]{2,6}""
 #entre corchetes xq estoy haciendo un rango
 #{2,6} no es necesario, restringe la cantidad de caracteres
+def mail_aceptado(mail):
+    patron15=r"[\w+_-]@[\w+]\.[\a-z]"
+    mail1=re.findall(patron15, mail)
+    if len(mail1) == len(mail):
+        print("Mail aceptado")
+    else:
+        print("mail rechazado")
+    

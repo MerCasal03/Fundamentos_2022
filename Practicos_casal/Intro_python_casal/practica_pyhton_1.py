@@ -21,10 +21,11 @@ segundo_apellido=input("decime tu segundo apellido: ")
 print(str.upper(primer_nombre[0] + primer_apellido[0]+ segundo_apellido[0]))
 
 #5
-#numeros=input("Decime tres numeros: ")
-#lista=numeros.split("")
-#promedio=(int(lista)[0]+int(lista)[1]+int(lista)[2])/len(lista))
-#print(promedio)
+numeros=input("decime tres numeros: ")
+lista=numeros.split(",")
+sumatoria=(int(lista[0])) + (int(lista[1])) + (int(lista[2]))
+promedio=sumatoria/len(lista)
+print(promedio)
 
 #6
 #horario=input("Minutos: ")

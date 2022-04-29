@@ -40,40 +40,21 @@ if dado == 6:
 
 
 #4
-peso_de_paquete_en_gramos1=input("Peso de paquete: ")
-peso_de_paquete_en_gramos=int(peso_de_paquete_en_gramos1)
-continente_de_destino=input("Continente de destino: ")
-if peso_de_paquete_en_gramos>5000:
-    print("No se realiza el envío")
+continente_destino=input("Continente de destino: ")
+peso_de_paquete=int(input("Peso de paquete en kilos: "))
+if peso_de_paquete > 5:
+    print("No se puede realizar el transporte")
 else:
-    if continente_de_destino == "América del Sur":
-        print((peso_de_paquete_en_gramos*10000)+"dolares")
-    if continente_de_destino == "América Central":
-        print((peso_de_paquete_en_gramos*15000)+"dolares")
-    if continente_de_destino == "América del Norte":
-        print((peso_de_paquete_en_gramos*18000)+"dolares")
-    if continente_de_destino == "Europa":
-        print((peso_de_paquete_en_gramos*24000)+"dolares")
-    if continente_de_destino == "Asia":
-        print((peso_de_paquete_en_gramos*30000)+"dolares")
-# peso_de_paquete_en_gramos=int(input("Decime el peso del paquete en gramos: "))
-# continente_de_destino=input("Decime el continente de destino: ")
-# if (peso_de_paquete_en_gramos/1000)>=5:
-#     print("No se realiza el envío")
-# if peso_de_paquete_en_gramos<5000 and continente_de_destino=="America del sur":
-#     print((peso_de_paquete_en_gramos/1000)*10000)
-# if peso_de_paquete_en_gramos<5000 and continente_de_destino=="America central":
-#     print((peso_de_paquete_en_gramos/1000)*15000)
-# if peso_de_paquete_en_gramos<5000 and continente_de_destino=="America del norte":
-#     print((peso_de_paquete_en_gramos/1000)*18000)
-# if peso_de_paquete_en_gramos<5000 and continente_de_destino=="Europa":
-#     print((peso_de_paquete_en_gramos/1000)*24000)
-# if peso_de_paquete_en_gramos<5000 and continente_de_destino=="Asia":
-#     print((peso_de_paquete_en_gramos/1000)*30000)
-
-        
-#costo_de_logistica(4000, "América del Sur")
-
+    if continente_destino == "Amércia del Sur":
+        print(10*(peso_de_paquete*1000))
+    if continente_destino == "Amércia Central":
+        print(15*(peso_de_paquete*1000))
+    if continente_destino == "Amércia del norte":
+        print(18*(peso_de_paquete*1000))
+    if continente_destino == "Europa":
+        print(24*(peso_de_paquete*1000))
+    if continente_destino == "Asia":
+        print(30*(peso_de_paquete*1000))
 
 #5
 numero_de_la_semana=input("Dia de la semana: ")
@@ -104,20 +85,28 @@ lista2=list(lista1).reverse()
 print(lista2)
 
 #7
-# numeros_de_lista=int(input("Números de lista: "))
-# for num in numeros_de_lista:
-#      lista3=[]
-#      while num >=0:
-#          lista3.append(num)
-# print(lista3)
+cant_numeros=int(input("cant de numeros de lista: "))
+for num in range(cant_numeros):
+    lista3=[]
+    numero=int(input("decime un numero: "))
+    while numero >=0:
+        lista3.append(numero)
+        numero=int(input("decime un numero: "))
+    print(lista3)
 
 #8
-lista_1=input("Decime 5 números para lista 1: ")
-lista_1=list(lista_1.split(","))
-lista_2=input("Decime 5 números para lista 2: ")
-lista_2=list(lista_2.split(","))
-lista_3=map(sum, zip(lista_1, lista_2))
-print(lista_1) #transformar la lista de string a int para poder sumar
+lista1=input("Decime 5 numeros: ")
+lista_1=lista1.split(",")
+lista2=input("Decime 5 numeros: ")
+lista_2=lista2.split(",")
+lista3=[]
+for n in lista_1:
+    numero=int(n)
+for n in lista_2:
+    numero2=int(n)
+    numeros_final=(numero+numero2)
+    lista3.append(numeros_final)
+print(lista3)
 
 #9
 
