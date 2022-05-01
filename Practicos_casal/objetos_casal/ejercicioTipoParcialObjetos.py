@@ -31,4 +31,8 @@ class Estudiante(Persona):
         return self.felicidad
 
 estudiante=Estudiante(100)
-
+estudiante.hacer_ejercicio(30)
+estudiante.estudiar(3)
+estudiante.comer()
+print(estudiante.aprobar())
+print(estudiante.energia_actual())

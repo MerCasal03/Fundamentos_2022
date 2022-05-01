@@ -54,13 +54,13 @@ maria = Golondrina(42)
 
 #3
 class Notebook:
-    def __innit__(self, marca, modelo, precio):
+    def __init__(self, marca, modelo, precio):
         self.marca=marca
         self.modelo=modelo
         self.precio=precio
-    
-    def descuentos(self, porcentaje_de_descuento):
-        self.precio -= self.precio*(porcentaje_de_descuento/100)
+
+    def descuento(self, porcentaje):
+        self.precio -= ((porcentaje/100)*self.precio)
 
 hp = Notebook("HP", "Lean", 10000)
 macbook = Notebook("Apple", "Air", 20000)
@@ -68,41 +68,44 @@ macbook = Notebook("Apple", "Air", 20000)
 
 #4
 class Contador:
-    def __innit__(self, valor_actual):
-        self.valor=valor_actual
-    
+    def __init__(self, valorActual):
+        self.valor=valorActual
+
     def inc(self):
         self.valor += 1
-    
+
     def dis(self):
         self.valor -= 1
 
     def reset(self):
         self.valor=0
-
-    def valor_nuevo(self, valor_nuevo):
-        self.valor=valor_nuevo
     
-valor_1=Contador(0)
-#5
+    def valorActual(self):
+        print(self.valor)
+
+    def valorNuevo(self, nuevo_valor):
+        self.valor=nuevo_valor
+    
+    # def ultimoComando(self):
+    #     if
+
 
 #6
 class Calculadora:
-    def __innit__(self, accion):
-        self.accion=accion
-    # def cargar(self):
-
-    # def sumar(self):
-    #     self += X
-
-    # def restar(self):
-    #     X
+    def cargar(self, numero):
+        self.valor=numero
     
-    # def multiplicar(self):
-    #     X
+    def sumar(self, numero):
+        self.valor += numero
+
+    def restar(self, numero):
+        self.valor -= numero
     
-    # def ValorActual():
-    #     X
+    def multiplicar(self, numero):
+        self.valor *= numero
+    
+    def valorActual(self):
+        print(self.valor)
     
 #7
 class Gorrion:

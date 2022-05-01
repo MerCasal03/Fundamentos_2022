@@ -138,35 +138,26 @@ gorrion2=Gorrion()
 
 
 #4
-class ModoTransporte:
-    def __innit__(self, combustible):
+class MedioDeTransporte:
+    def __init__(self, combustible):
         self.combustible=combustible
+    
+    def cargar_combustible(self, carga):
+        self.combustible += carga
 
-    def cargar_combustible(self, combustibleCargado):
-        self.combustible+=combustibleCargado
+    def entran_personas(self, personas):
+        return personas <= self.maximo_personas()
 
-    def entran(self, personas):
-        if self.personas <= self.maxPersonas
-
-class Auto(ModoTransporte):
-    def __innit__(self, combustible):
-        self.combustible=combustible
-        self.pasajeros= 0<self.pasajeros<=5
-
-    def recorrer(self, kmsRecorridos):
-        self.combustible-=kmsRecorridos*0.5
-
-    def maxPersonas(self):
+class Auto(MedioDeTransporte):
+    def maximo_personas(self, personas):
         return 5
 
-class Moto(ModoTransporte):
-    def __innit__(self, combustible):
-        self.combustible=combustible
-        self.pasajeros= 0<self.pasajeros<=2
+    def recorrer(self, kms):
+        self.combustible -= (kms/2)
 
-    
-    def recorrer(self, kmsRecorridos):
-        self.combustible-=kmsRecorridos
-
-    def maxPersonas(self):
+class Moto(MedioDeTransporte):
+    def maximo_personas(self):
         return 2
+    
+    def recorrer(self, kms):
+        self.combustible -= kms
