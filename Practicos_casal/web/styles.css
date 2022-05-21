@@ -1,0 +1,14 @@
+body{ /*sin punto xq no es nombre de clase */
+    margin: 20px;
+}
+
+.titulo{
+    margin-left: 20px;
+    background-color: aqua;
+    border: black 3px dotted;
+    padding-left: 33px;
+}
+.galeria img{
+    width: 256px;
+    height: 261px;
+}
