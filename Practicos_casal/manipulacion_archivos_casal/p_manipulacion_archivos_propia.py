@@ -6,7 +6,7 @@ with open("bio3.txt", "a") as f:
 #1
 def no_empiezan_con(archivo, letra):
     with open(archivo, "r") as a:
-        word_list=a.read().split()
+        word_list=a.read().split("\n")
         for i in word_list:
             contador=[]
             if i[0] != letra:

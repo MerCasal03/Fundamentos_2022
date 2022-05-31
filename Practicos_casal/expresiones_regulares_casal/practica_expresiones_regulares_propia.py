@@ -24,26 +24,22 @@ string = "Defíni la función aprobar_materias"
 re.search('\S\w*' + '_' + '\S\w*', string) 
 
 #5
-def empieza_con_numero_especifico(numero_especifico, string):
-    if re.search('numero_especifico\A', string) == numero_especifico:
-        print("Empieza con caracter indicado")
+def empieza_con_numero_especifico(string, numero):
+    patron7=str(numero)
+    if (re.match(patron7, string)) is not None:
+        print("Empieza con numero indicado")
     else:
-        print("No empieza con caracter indicado")
-
-empieza_con_numero_especifico(2, texto1)
+        print("No empieza con numero indicado")
+empieza_con_numero_especifico(texto1, 2)
 
 #6
-listaprueba=["Ana Maria",
-             "Juana Lopez"]
-
-# def encontrar_frase(frase, lista):
-#     for e in lista:
-#         if re.findall(frase, lista):
-#             print("Se encontró frase dada")
-#         else:
-#             print("No se encontró frase dada")
-
-# encontrar_frase("[Ana Maria]", listaprueba)
+def frases_dadas(lista, string):
+    coincidencias=[]
+    for frase in lista:
+        if re.search(frase, string):
+            coincidencias.append(frase)
+    print(coincidencias)
+frases_dadas(["a", "hola", "le puse cuca"], "a la hola grande le puse cuca 9")
 
 #7
 def solo_autorizados(string):
@@ -70,6 +66,7 @@ def entre_guiones(string):
     #^ no contar un caracter/rango que venga despues de ^
     #\. que aparezca literalmente un punto, no el metacaracter
     #+ 0 o más veces
+    
 #10
 def entre_simbolos(string):
     print(re.findall(r"@(.*?)&", string))
@@ -106,4 +103,6 @@ def mail_aceptado(mail):
         print("Mail aceptado")
     else:
         print("mail rechazado")
+
+
     
